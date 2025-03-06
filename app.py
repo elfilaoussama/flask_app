@@ -22,7 +22,7 @@ def predict():
         return render_template("index.html",
                                error="Email is required.")  # Send an error message if no email is provided
 
-    prediction = model_predict([email])  # Use the model_predict function to get the prediction
+    prediction = model_predict(email)  # Use the model_predict function to get the prediction
     return render_template("index.html", email=email,
                            prediction=prediction)  # Return the email and prediction to the template
 

@@ -1,0 +1,49 @@
+/* Main styling for Spam Email Detection app */
+
+.result-box {
+    display: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.spam-icon, .not-spam-icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.custom-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.header-container {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 576px) {
+    .form-container {
+        padding: 0 15px;
+    }
+
+    .custom-textarea {
+        min-height: 120px;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .d-flex.justify-content-between button {
+        width: 100%;
+    }
+}
