@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spam Email Detection</title>  <!-- Title should be relevant to the app, e.g., 'Spam Email Detection' -->
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            color: aliceblue;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Spam Email Detection</h1>  <!-- Main heading -->
+
+    <div>
+        <form method="POST" action="/predict">  <!-- Form method should be POST and action should be '/predict' -->
+            <textarea rows="4" cols="50" name="email" placeholder="Paste your email content here" autocomplete="off">{{ email }}</textarea>
+            <div>
+                <button type="submit">Predict</button>  <!-- Button type is submit, and the text is 'Predict' -->
+                <a href="/">Reset</a>  <!-- Reset functionality, leading to the home page -->
+            </div>
+        </form>
+    </div>
+
+    <div>
+        {% if prediction %}  <!-- Check if prediction exists -->
+            {% if prediction == 'spam' %}  <!-- Check if the prediction is spam -->
+                <h2 style="color: red">Warning: This email is Spam!</h2>  <!-- Spam warning message with red color -->
+            {% else %}
+                <h2 style="color: green">This email is not Spam.</h2>  <!-- Not Spam message with green color -->
+            {% endif %}
+        {% endif %}
+    </div>
+
+</body>
+</html>
