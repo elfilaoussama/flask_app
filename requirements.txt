@@ -1,7 +1,3 @@
-Flask
-numpy
-pickle-mixin
-Pillow
-pip
-python-dateutil
-wordcloud
+Flask==2.2.5
+scikit-learn==1.3.0
+numpy==1.24.3
